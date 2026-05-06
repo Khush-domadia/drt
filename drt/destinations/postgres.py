@@ -172,7 +172,7 @@ class PostgresDestination:
         config: PostgresDestinationConfig,
     ) -> SyncResult:
         """TRUNCATE (once) → INSERT within a transaction."""
-        from psycopg2 import sql as _pgsql   # <-- ADD THIS LINE at the top of the method
+        from psycopg2 import sql as _pgsql
         result = SyncResult()
 
         if not self._replace_truncated:
